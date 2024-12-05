@@ -23,8 +23,8 @@ async function loadWallet() {
     const provider = new ethers.providers.InfuraProvider('mainnet', 'YOUR_INFURA_API_KEY');
     const balance = await provider.getBalance(address);
 
-    document.getElementById('wallet-address').textContent = Адрес: ${address};
-    document.getElementById('wallet-balance').textContent = Баланс: ${ethers.utils.formatEther(balance)} ETH;
+    document.getElementById('wallet-address').textContent = address;
+    document.getElementById('wallet-balance').textContent = ${ethers.utils.formatEther(balance)} ETH;
 }
 
 async function sendTransaction() {
@@ -45,4 +45,4 @@ async function sendTransaction() {
 
 function goBack() {
     window.location.href = 'index.html';
-}
+} 
