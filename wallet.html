@@ -8,13 +8,20 @@
     <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
     <script src="app.js" defer></script>
 </head>
-<body onload="loadWallet()">
+<body>
     <div class="container">
-        <h1>Ваш Кошелек</h1>
-        <p id="wallet-address">Адрес кошелька: ...</p>
-        <p id="wallet-balance">Баланс: ...</p>
-        <button onclick="sendTransaction()">Отправить 0.01 ETH</button>
-        <button onclick="goBack()">Назад</button>
+        <h1>👛 Ваш Кошелек</h1>
+        <div class="wallet-info">
+            <p><strong>Адрес кошелька:</strong></p>
+            <p id="wallet-address">...</p>
+            <p><strong>Баланс:</strong></p>
+            <p id="wallet-balance">...</p>
+        </div>
+        <div class="buttons">
+            <button class="primary-btn" onclick="sendTransaction()">Пополнить</button>
+            <button class="primary-btn" onclick="sendTransaction()">Вывести</button>
+        </div>
+        <button class="secondary-btn" onclick="goBack()">Назад</button>
     </div>
 </body>
 </html>
